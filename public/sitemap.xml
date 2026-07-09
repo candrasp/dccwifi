@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dccwifi.com/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/tower_outdoor.png</image:loc>
+      <image:title>Pemasangan Tower Outdoor DCCWIFI Ponorogo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/fiber_optic.png</image:loc>
+      <image:title>Pemasangan Kabel Fiber Optik DCCWIFI Ponorogo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/wifi_router.png</image:loc>
+      <image:title>Router WiFi Terpasang DCCWIFI Ponorogo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/technician_working.png</image:loc>
+      <image:title>Tim Teknisi DCCWIFI Ponorogo Bekerja</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/network_ready.png</image:loc>
+      <image:title>Keluarga Menikmati Koneksi Internet DCCWIFI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dccwifi.com/images/speed_test.png</image:loc>
+      <image:title>Uji Kecepatan Internet DCCWIFI</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue-50: #eff6ff;
+  --color-brand-blue-100: #dbeafe;
+  --color-brand-blue-600: #2563eb;
+  --color-brand-blue-700: #1d4ed8;
+  --color-brand-blue-800: #1e40af;
+  --color-brand-green-50: #ecfdf5;
+  --color-brand-green-500: #10b981;
+  --color-brand-green-600: #059669;
+  --color-brand-green-700: #047857;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-draw-line: draw-line 2.5s ease-out forwards;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+
+  @keyframes draw-line {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.2), 0 0 20px rgba(37, 99, 235, 0.1);
+    }
+
+    to {
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.4), 0 0 30px rgba(16, 185, 129, 0.3);
+    }
+  }
+}
+
+.animate-float {
+  will-change: transform;
+  /* contain: layout removed — can cause scroll jank in Chrome mobile */
+}
+
+/* ── HEADER: Force GPU compositing layer BEFORE scroll starts ──
+   transform: translateZ(0) + backface-visibility:hidden = Chrome promotes this
+   element to its own composited layer. When address bar hides/shows on Chrome
+   mobile, fixed elements on a GPU layer are NOT repainted → no jank/freeze. */
+#header {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Transition ONLY on background/shadow, NOT on transform — avoids repaint during scroll */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#header[data-scrolled="true"],
+#header.header-solid {
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.08), 0 1px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#header:not([data-scrolled="true"]):not(.header-solid) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Glass effects — backdrop-filter ONLY on desktop (Chrome mobile compositor jank fix) */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(241, 245, 249, 1);
+}
+
+/* Only enable blur on desktop — avoids compositor-promoted layer jank on Chrome mobile */
+@media (min-width: 769px) {
+  .glass-nav {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Mobile: NO backdrop-filter at all — main fix for Chrome scroll jank */
+@media (max-width: 768px) {
+  * {
+    /* Prevent any accidental backdrop-filter on mobile */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* NOTE: overscroll-behavior-y intentionally NOT set to 'none'
+     agar pull-to-refresh Chrome mobile tetap berfungsi.
+     Scroll jank sudah ditangani via GPU layer (translateZ) di header. */
+
+  /* Ensure touch scrolling is hardware accelerated */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Image gallery zoom effect */
+.gallery-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* FAQ transitions */
+.faq-content {
+  transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+/* ── Hardware-Accelerated ISP SVG Animations ── */
+.svg-wave {
+  transform-origin: 250px 250px;
+  will-change: transform, opacity;
+}
+
+.svg-wave-1 {
+  animation: pulse-ring 3.5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+.svg-wave-2 {
+  animation: pulse-ring 3.5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+  animation-delay: 1.1s;
+}
+
+.svg-wave-3 {
+  animation: pulse-ring 3.5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+  animation-delay: 2.2s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.15);
+    opacity: 0.9;
+  }
+
+  80%,
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.svg-node-device {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.svg-node-device:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 4px 8px rgba(37, 99, 235, 0.3));
+}
+
+.connection-line-down {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash-flow-down 1s linear infinite;
+}
+
+.connection-line-up {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash-flow-up 1s linear infinite;
+  stroke: rgba(16, 185, 129, 0.25);
+  /* Subtle green for upload */
+}
+
+@keyframes dash-flow-down {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes dash-flow-up {
+  to {
+    stroke-dashoffset: -100;
+  }
+}

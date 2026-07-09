@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- SEO Meta Tags -->
+  <title>Syarat & Ketentuan | DCCWIFI Ponorogo</title>
+  <meta name="description"
+    content="Syarat & Ketentuan berlangganan layanan internet DCCWIFI (PT Restu Panca Alam). Pahami hak dan kewajiban pelanggan.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://dccwifi.com/terms-conditions.html">
+
+  <!-- Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/dccwifi.ico">
+
+  <style>
+    /* Prevent FOUC: Hide all top-level elements except top-loader until CSS & JS are loaded */
+    body:not(.page-loaded)> :not(#top-loader) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  </style>
+</head>
+
+<body
+  class="font-['Inter'] text-slate-800 bg-slate-50 antialiased selection:bg-brand-blue-100 selection:text-brand-blue-700">
+
+  <!-- Top Progress Bar Loader -->
+  <div id="top-loader"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 3px; background-color: rgba(241, 245, 249, 0.5); z-index: 99999; transition: opacity 0.4s ease-in-out;">
+    <div id="top-loader-progress"
+      style="height: 100%; width: 0%; background-color: #2563eb; box-shadow: 0 0 8px #2563eb, 0 0 4px #2563eb; transition: width 0.3s ease-out;">
+    </div>
+  </div>
+  <!-- Page Loader (external, no unsafe-inline needed) -->
+  <script defer src="/src/loader.js"></script>
+
+  <!-- Header / Navigation -->
+  <header id="header"
+    class="fixed top-0 left-0 w-full h-20 z-50 header-solid bg-white/80 backdrop-blur-md border-b border-slate-100"
+    style="-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;touch-action:pan-y;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center justify-between h-full">
+        <!-- Logo -->
+        <a href="/index.html#hero" class="flex items-center space-x-2 group">
+          <img src="/images/logo-dccwifi.svg" alt="DCCWIFI" class="w-10 h-10">
+          <span class="font-['Outfit'] font-extrabold text-2xl tracking-tight text-slate-900">
+            DCC<span class="text-brand-blue-600">WIFI</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="/index.html#hero"
+            class="nav-link text-sm font-medium text-slate-600 hover:text-brand-blue-600 transition-colors">Home</a>
+          <a href="/index.html#tentang"
+            class="nav-link text-sm font-medium text-slate-600 hover:text-brand-blue-600 transition-colors">Tentang
+            Kami</a>
+          <a href="/index.html#layanan"
+            class="nav-link text-sm font-medium text-slate-600 hover:text-brand-blue-600 transition-colors">Layanan</a>
+          <a href="/index.html#paket"
+            class="nav-link text-sm font-medium text-slate-600 hover:text-brand-blue-600 transition-colors">Paket
+            Internet</a>
+          <a href="/index.html#faq"
+            class="nav-link text-sm font-medium text-slate-600 hover:text-brand-blue-600 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center">
+          <a href="https://wa.me/6281249406229" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-brand-green-600 hover:bg-brand-green-700 active:bg-brand-green-700 transition-all shadow-md hover:shadow-lg shadow-brand-green-600/20 transform hover:-translate-y-0.5">
+            <img src="/images/icons/whatsapp.svg" alt="WhatsApp" width="16" height="16"
+              class="w-4 h-4 mr-2 invert brightness-0 saturate-0" style="filter: invert(1);">
+            Hubungi CS
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button"
+            class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <i id="menu-icon-open" data-lucide="menu" class="w-6 h-6"></i>
+            <i id="menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-b border-slate-100 transition-all duration-300 opacity-0 -translate-y-2.5">
+      <div class="px-4 pt-2 pb-6 space-y-2">
+        <a href="/index.html#hero"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue-600 transition-all">Home</a>
+        <a href="/index.html#tentang"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue-600 transition-all">Tentang
+          Kami</a>
+        <a href="/index.html#layanan"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue-600 transition-all">Layanan</a>
+        <a href="/index.html#paket"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue-600 transition-all">Paket
+          Internet</a>
+        <a href="/index.html#faq"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue-600 transition-all">FAQ</a>
+        <div class="pt-4 px-4">
+          <a href="https://wa.me/6281249406229" target="_blank" rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-base font-semibold text-white bg-brand-green-600 hover:bg-brand-green-700 transition-all shadow-md shadow-brand-green-600/20">
+            <img src="/images/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" class="w-5 h-5 mr-2"
+              style="filter: invert(1);">
+            Hubungi via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-36 pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Page Header -->
+      <div class="text-center mb-16">
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-brand-blue-50 text-brand-blue-700 border border-brand-blue-100">
+          DCCWIFI Legal
+        </span>
+        <h1 class="mt-4 font-['Outfit'] font-extrabold text-4xl text-slate-900 sm:text-5xl tracking-tight">
+          Syarat & Ketentuan
+        </h1>
+        <p class="mt-4 text-slate-500 text-sm">
+          Terakhir Diperbarui: 14 Juni 2026
+        </p>
+      </div>
+
+      <!-- Article Card -->
+      <div
+        class="bg-white rounded-3xl p-8 md:p-12 shadow-xs border border-slate-100 leading-relaxed text-slate-600 space-y-8">
+        <section class="space-y-4">
+          <p>
+            Selamat datang di <strong>DCCWIFI</strong>. Dengan menggunakan layanan kami, Anda dianggap telah membaca,
+            memahami, dan menyetujui ketentuan-ketentuan berikut ini:
+          </p>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">1. Ketentuan Umum</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Layanan DCCWIFI disediakan untuk penggunaan pribadi atau bisnis sesuai dengan paket yang dipilih.</li>
+            <li>Pelanggan dilarang keras menjual kembali (resell) bandwidth atau layanan DCCWIFI kepada pihak lain tanpa
+              izin tertulis dari kami.</li>
+            <li>DCCWIFI berhak melakukan pemeliharaan jaringan (maintenance) berkala untuk menjaga kualitas layanan.
+            </li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">2. Pemasangan dan Perangkat</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Proses instalasi akan dilakukan setelah survey lokasi dinyatakan layak oleh tim teknis kami.</li>
+            <li>Perangkat yang dipinjamkan selama masa berlangganan adalah milik DCCWIFI dan wajib dijaga dengan baik
+              oleh pelanggan.</li>
+            <li>Kerusakan perangkat akibat kelalaian pelanggan (seperti terkena air, jatuh, atau korsleting listrik
+              rumah) menjadi tanggung jawab pelanggan.</li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">3. Pembayaran dan Biaya</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Pembayaran iuran bulanan wajib dilakukan tepat waktu sesuai dengan tanggal jatuh tempo yang telah
+              ditentukan.</li>
+            <li>Keterlambatan pembayaran dapat mengakibatkan isolir (pemutusan sementara) layanan secara otomatis oleh
+              sistem.</li>
+            <li>DCCWIFI berhak menyesuaikan harga paket dengan pemberitahuan sebelumnya kepada pelanggan.</li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">4. Batasan Penggunaan (Usage Policy)</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Layanan kami adalah True Unlimited, namun pelanggan dilarang menggunakan koneksi untuk aktivitas ilegal
+              (seperti hacking, penyebaran konten melanggar hukum, atau aktivitas lain yang merugikan pihak lain).</li>
+            <li>Pelanggan bertanggung jawab penuh atas segala aktivitas yang dilakukan melalui jaringan DCCWIFI di
+              lokasi pelanggan.</li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">5. Gangguan dan Dukungan Teknis</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>DCCWIFI berkomitmen menjaga stabilitas koneksi, namun tidak bertanggung jawab atas gangguan yang
+              disebabkan oleh keadaan di luar kendali (Force Majeure) seperti bencana alam, pemutusan kabel oleh pihak
+              ketiga, atau gangguan massal dari penyedia transmisi pusat.</li>
+            <li>Tim teknis akan memberikan dukungan pada jam operasional untuk mengatasi kendala yang dilaporkan
+              pelanggan.</li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <h2 class="font-['Outfit'] font-bold text-2xl text-slate-900">6. Pengakhiran Layanan</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Pelanggan yang ingin berhenti berlangganan wajib menginformasikan kepada pihak DCCWIFI
+              sekurang-kurangnya 7 hari sebelum masa langganan berakhir.</li>
+            <li>Saat layanan berakhir, pelanggan wajib mengembalikan perangkat milik DCCWIFI dalam kondisi baik.</li>
+          </ul>
+        </section>
+
+        <hr class="border-slate-100">
+
+        <section class="space-y-4">
+          <p>
+            DCCWIFI berhak untuk memperbarui atau mengubah Syarat dan Ketentuan ini sewaktu-waktu tanpa pemberitahuan
+            sebelumnya demi meningkatkan kualitas layanan. Kami menyarankan Anda untuk memeriksa halaman ini secara
+            berkala agar tetap mendapatkan informasi terbaru.
+          </p>
+          <p>
+            Dengan terus menggunakan layanan kami setelah adanya perubahan, Anda dianggap menyetujui ketentuan tersebut.
+            Jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut mengenai kebijakan ini, jangan ragu untuk
+            menghubungi pusat layanan pelanggan kami melalui kontak resmi yang tersedia.
+          </p>
+          <p class="font-semibold text-slate-900 mt-6">
+            Terima kasih telah mempercayakan koneksi internet Anda kepada DCCWIFI.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 pt-20 pb-8 relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-800">
+        <!-- Brand Info -->
+        <div class="lg:col-span-4 md:col-span-6 space-y-6">
+          <a href="/index.html#hero" class="flex items-center space-x-2">
+            <img src="/images/logo-dccwifi.svg" alt="DCCWIFI" class="w-10 h-10">
+            <span class="font-['Outfit'] font-extrabold text-2xl tracking-tight text-white">
+              DCC<span class="text-brand-blue-600">WIFI</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Penyedia jaringan internet cepat, dan terpercaya untuk menjawab semua kebutuhan
+            digitalisasi keluarga dan bisnis Anda.
+          </p>
+          <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-800/80">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Supported By</div>
+            <div class="font-bold text-white text-sm mt-1">PT. Restu Panca Alam</div>
+          </div>
+        </div>
+
+        <!-- Links Navigation -->
+        <div class="lg:col-span-2 md:col-span-6 lg:pl-12">
+          <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Halaman</h4>
+          <ul class="space-y-4 text-sm">
+            <li><a href="/index.html#hero" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/index.html#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+            <li><a href="/index.html#layanan" class="hover:text-white transition-colors">Layanan</a></li>
+            <li><a href="/index.html#paket" class="hover:text-white transition-colors">Paket Internet</a></li>
+            <li><a href="/index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Support -->
+        <div class="lg:col-span-2 md:col-span-6 lg:pl-6">
+          <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Bantuan</h4>
+          <ul class="space-y-4 text-sm">
+            <li><a href="/index.html#faq" class="hover:text-white transition-colors">FAQ / Tanya Jawab</a></li>
+            <li><a href="https://wa.me/6281249406229" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors">Hubungi CS</a></li>
+            <li><a href="/privacy-policy.html" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+            <li><a href="/terms-conditions.html" class="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div class="lg:col-span-4 md:col-span-6 space-y-4 text-sm">
+          <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Hubungi Kami</h4>
+          <div class="flex items-start space-x-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+            <span>Jl. Raya Ngumpul Slahung, RT.1/RW.1, Pabrik, Bulu Kidul, Kec. Balong, Kabupaten Ponorogo, Jawa Timur
+              63461</span>
+          </div>
+          <div class="flex items-center space-x-3 pt-2">
+            <img src="/images/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" class="w-5 h-5 shrink-0"
+              style="filter: invert(62%) sepia(90%) saturate(400%) hue-rotate(90deg) brightness(1);">
+            <a href="https://wa.me/6281249406229" target="_blank" rel="noopener noreferrer"
+              class="hover:text-white transition-colors font-semibold font-['Inter']">0812-4940-6229</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2017 - <span id="current-year"></span> DCCWIFI - Fast, Stable & Unlimited Internet. All rights reserved.
+        </p>
+        <p class="flex items-center">
+          Designed by&nbsp;
+          <a href="https://instagram.com/kenvano19/" target="_blank" rel="noopener noreferrer"
+            class="text-white hover:text-brand-blue-400 transition-colors font-medium">
+            Kenvano
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
