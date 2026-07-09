@@ -7,8 +7,17 @@
 
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" />
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Preload critical fonts (eliminates render-blocking chain) -->
+  <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/outfit-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/outfit-v15-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/dccwifi.ico" />
 
   <!-- SEO Meta Tags -->
   <title>Dccwifi | Provider Internet Murah Ponorogo - Mulai 125rb</title>
@@ -43,15 +52,7 @@
   <!-- Canonical link -->
   <link rel="canonical" href="https://dccwifi.com/" />
 
-  <!-- Google Fonts (Outfit & Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/images/dccwifi.ico" />
 
   <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
